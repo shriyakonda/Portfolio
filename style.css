@@ -4,9 +4,75 @@ body {
     margin-inline: max(1.5em, (100% - 100ch) / 2);
 }
 
+body {
+    font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: max(1.5em, (100% - 100ch) / 2);
+}
+
 img {
     width: 400px;
 }
+
+/* accent color */
+:root {
+  --color-accent: oklch(62% 0.18 250);
+}
+
+/* nav bar */
+nav {
+  display: flex;
+  border-bottom: 1px solid;
+  margin-bottom: 2em;
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+nav a.current {
+  font-weight: bold;
+  border-bottom: 3px solid;
+}
+
+/* contact form */
+input, textarea, button { font: inherit; }
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  max-width: 40em;
+}
+
+label {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+/* projects grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+.projects article img { width: 100%; }
 
 /* accent color */
 :root {
