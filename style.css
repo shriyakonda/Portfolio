@@ -133,3 +133,8 @@ label {
 }
 
 .projects article img { width: 100%; }
+
+button[type="submit"] {
+  grid-column: 1 / -1;
+  width: 100%;
+}
